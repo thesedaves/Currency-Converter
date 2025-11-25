@@ -8,19 +8,18 @@ public class ConsoleGUI {
         System.out.println("--Willkommen im Währungsrechner--\n" +
                            "1. Verfügbare Währungen anzeigen \n" +
                            "2. Währungsrechner\n" +
-                           "3. ...\n");
+                           "3. Exit\n");
         System.out.print("> ");
         String input = sc.nextLine();
         switch (input) {
             case "1" -> {
                 Currency.displayCurrencies();
-                returnInit();
             }
             case "2" -> {
                 Calculator.currencyCalculator();
-                returnInit();
             }
-            default -> {}
+            case "exit", "3" -> {return;}
+            default -> {return;}
         }
         returnInit();
     }
