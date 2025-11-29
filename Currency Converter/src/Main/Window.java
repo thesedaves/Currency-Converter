@@ -31,9 +31,23 @@ public class Window {
         waehrungsrechner.setVisible(true);
 
         JButton currenciesButton = new JButton("Währungen anzeigen");
-        panel.add(currenciesButton, BorderLayout.NORTH);
-        currenciesButton.setBorder(BorderFactory.createEmptyBorder(150, 0, 0, 0));
+        JPanel wrapper1 = new JPanel();
+        wrapper1.add(currenciesButton);
+        wrapper1.setBorder(BorderFactory.createEmptyBorder(45, 0, 0, 0));
+
+        panel.add(wrapper1, BorderLayout.CENTER);
         currenciesButton.setFont(waehrungsrechner.getFont());
+        currenciesButton.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+
+        JButton converterButton = new JButton("Währungen berechnen");
+        JPanel wrapper2 = new JPanel();
+        wrapper2.add(converterButton);
+        wrapper2.setBorder(BorderFactory.createEmptyBorder(0, 0, 300, 0));
+
+        panel.add(wrapper2, BorderLayout.SOUTH);
+        converterButton.setFont(waehrungsrechner.getFont());
+        converterButton.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+
         window.setVisible(true);
     }
 }
