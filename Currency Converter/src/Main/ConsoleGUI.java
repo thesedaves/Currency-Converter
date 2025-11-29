@@ -18,7 +18,6 @@ public class ConsoleGUI {
             case "2" -> {
                 Calculator.currencyCalculator();
             }
-            case "exit", "3" -> {return;}
             default -> {return;}
         }
         returnInit();

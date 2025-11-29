@@ -2,6 +2,7 @@ package Main;
 
 public class Main {
     public static void main(String[] args) {
-        ConsoleGUI.init();
+        //ConsoleGUI.init();
+        Window.startWindow();
     }
 }
